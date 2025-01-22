@@ -4,8 +4,9 @@ export default function NewPost(props) {
 
   const handleClick = async() => {
     const response =  await fetch(`/api/generatePost`,{
-      method:'POST'
+      method:'POST',
     })
+    console.log(response)
     const json = await response.json();
     console.log(json)
   }
