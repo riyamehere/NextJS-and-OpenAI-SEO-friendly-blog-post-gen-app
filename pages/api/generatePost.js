@@ -31,6 +31,6 @@ export default async function handler(req, res) {
     })
     console.log(response.data.choices[0]?.message?.content)
     const postContent = response.data.choices[0]?.message?.content
-    res.status(200).json({ name: 'generate post' })
+    res.status(200).json({ post: {postContent} })
   }
   
